@@ -1,0 +1,72 @@
+function stamp(){
+    
+    this.name = "stamp";
+    this.icon = "assets/star.png";
+        
+    //var figure3;
+    var figure1;
+    var figure2;
+    
+    var self = this;
+
+    //figura3 = loadImage('assets/star.png');
+    figure1 = loadImage('assets/circle.png');
+    figure2 = loadImage('assets/rectangle.jpg');
+
+        //select(".options").html("<input type='range' min='50' max='200' value='100' id='myRange'> Stamp Size<button id='figure1'>circle</button> <button id='figure2'>Rectangle</button><button id='figure3'>star</button>");
+    
+    
+    select(".options").html("<input type='range' min='50' max='200' value='100' id='myRange'> Stamp Size<button id='figure1'>circle</button> <button id='figure2'>Rectangle</button>");
+    
+     var valor = document.querySelector('#myRange');
+
+     var circle = document.querySelector('#figure1');
+    var rectangle = document.querySelector('#figure2');
+     //var star = document.querySelector('#figure3');
+    
+    this.figure ="circle";
+
+    var figureSize = valor.value;    
+    
+    circle.addEventListener("click",function(){
+           self.figure = "circle" });
+    
+    rectangle.addEventListener("click",function(){
+           self.figure = "rectangle"});
+    
+//    star.addEventListener("click",function(){
+//           self.figure = "star" });
+//    
+    this.draw =function(){
+
+        
+    if(mouseIsPressed){
+//        if(this.figure ==="star"){
+//            var figureSize = valor.value;
+//            image(figure3, mouseX, mouseY, figureSize,figureSize)        
+//        }
+        
+         if(this.figure ==="circle"){
+            var figureSize = valor.value;
+            image(figure1, mouseX, mouseY, figureSize,figureSize)        
+        }
+        
+        else if(this.figure ==="rectangle"){
+            var figureSize = valor.value;
+            image(figure2, mouseX, mouseY, figureSize,figureSize)        
+        }
+        }
+        }
+//    this.unselectTool = function() {
+//		updatePixels();
+//		//clear options
+//		select(".options").html("");
+//	};
+}
+
+//https://www.w3schools.com/howto/howto_js_rangeslider.asp
+//https://www.w3schools.com/TAgs/tag_button.asp
+
+//Google Gemini taught gave me the reference to use the: 
+//this.figure as a status of which figure to set
+//and the correct use of the self variable
