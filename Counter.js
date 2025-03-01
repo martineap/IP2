@@ -27,22 +27,9 @@ function counter(){
         self.updateCounter(1);
     });
     minusBtn.addEventListener('click',function(){
-        self.updateCounter(1);
+        self.updateCounter(-1);
     });   
-        
-        if(conteo >= 10){
-            plusBtn.setAttribute('disabled', true);
-        } else{
-            plusBtn.setAttribute('disabled',false);
-        }
-        
-        if(counter<=0){
-            minusBtn.setAttribute('disabled',true);
-        } else{
-            minusBtn.setAttribute('disabled',false);
-        } 
-    }   
-    
+     
     this.draw =function(){
         
                         }
