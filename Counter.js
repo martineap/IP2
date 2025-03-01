@@ -24,10 +24,10 @@ function counter(){
         counterDisplay.textContent = conteo;
         
          plusBtn.addEventListener('click',function(){
-        updateCounter(1);
+        self.updateCounter(1);
     });
     minusBtn.addEventListener('click',function(){
-        updateCounter(1);
+        self.updateCounter(1);
     });   
         
         if(conteo >= 10){
